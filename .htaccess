@@ -1,0 +1,14 @@
+# enable basic rewriting
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+# HTID:17544702: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www.)?(smart-traveller.000webhostapp.com)(/)?.*$      [NC]
+RewriteRule .*.(.jpg|.jpeg|.gif|.png|.bmp|.tiff)$ https://smart-traveller.000webhostapp.com/ [R,NC]
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:17544702:
+
+Options -Indexes
